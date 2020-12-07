@@ -6,14 +6,14 @@ import java.awt.geom.AffineTransform;
 import java.net.URL;
 
 public class Dog {
-	private int x = 0,y = 180;
+	private int x = 440,y = 350;
 	private Image img1; // image of the frog
 	private Image img2;
 	private Image img;
 	private AffineTransform tx = AffineTransform.getTranslateInstance(x, y);
 
 	public Dog() {
-		img1 = getImage("dog1.png"); //load the image for Tree
+		img1 = getImage("dog1.png"); 
 		img2 = getImage("dog2.png");
 		img = img1;
 		init(x, y); 				//initialize the location of the image
@@ -35,8 +35,14 @@ public class Dog {
 		 * You will need to code it so that the animation looks as natural as possible. 
 		 */
 
-		
-		g2.drawImage(img, tx, null);   
+		if(Math.random()<.5) {
+			img = img2;
+		}
+		else {
+			img = img1;
+		}
+		g2.drawImage(img, tx, null);
+			
 	}
 	
 	private void init(double a, double b) {

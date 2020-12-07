@@ -18,6 +18,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener {
 	Ground foreground = new Ground();
 	Tree aTree = new Tree();
 	Duck d = new Duck();
+	Dog dog = new Dog();
 	
 	Music bang = new Music("Hit.wav", false);
 	Music miss = new Music("Laugh.wav", false);
@@ -28,6 +29,7 @@ public class Frame extends JPanel implements ActionListener, MouseListener {
 		d.paint(g);	
 		foreground.paint(g);
 		aTree.paint(g);
+		dog.paint(g);
 	}
 	
 	public static void main(String[] arg) {
